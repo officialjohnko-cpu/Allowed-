@@ -26,11 +26,12 @@ class HackerColors:
 
 
 class WiFiBypassTool:
+    # URL အသစ်သို့ ပြောင်းလဲထားသောနေရာ
     FIXED_URL = (
-        "https://portal-as.ruijienetworks.com/api/auth/wifidog?stage=portal&gw_id=c4b25bf98f07&"
-        "gw_sn=H1U3247000617&gw_address=150.0.0.1&gw_port=2060&ip=150.0.169.45&mac=c6:8a:b9:f0:93:e8&"
-        "slot_num=14&nasip=192.168.1.218&ssid=VLAN150&ustate=0&mac_req=1&url=http%3A%2F%2F192.168.0.1%2F&"
-        "chap_id=%5C311&chap_challenge=%5C057%5C131%5C330%5C007%5C347%5C230%5C111%5C365%5C101%5C327%5C345%5C127%5C125%5C344%5C035%5C126"
+        "https://portal-as.ruijienetworks.com/api/auth/wifidog?stage=portal&gw_id=984a6b9da30e&"
+        "gw_sn=H1TA1EN003183&gw_address=192.168.110.1&gw_port=2060&ip=192.168.110.189&mac=88:2f:92:d4:c9:e0&"
+        "slot_num=14&nasip=192.168.1.198&ssid=VLAN233&ustate=0&mac_req=1&url=http%3A%2F%2F192.168.0.1%2F&"
+        "chap_id=%5C361&chap_challenge=%5C155%5C234%5C000%5C201%5C352%5C275%5C342%5C210%5C202%5C327%5C272%5C071%5C026%5C330%5C115%5C266"
     )
     
     AUTH_ENDPOINT = "https://portal-as.ruijienetworks.com/api/auth/voucher/?lang=en_US"
@@ -93,8 +94,7 @@ class WiFiBypassTool:
             pass
         return "150.0.0.1"
 
-    @staticmethod
-    def run_system_spinner(module_name: str, duration: float = 0.5) -> None:
+    def run_system_spinner(self, module_name: str, duration: float = 0.5) -> None:
         chars = [" FRAME-0 ", " FRAME-1 ", " FRAME-2 ", " FRAME-3 "]
         glyphs = ["◢", "◣", "◤", "◥"]
         end_time = time.time() + duration

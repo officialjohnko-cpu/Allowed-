@@ -1,2 +1,2 @@
 import JOHN 
-core.main()
+JOHN.main()
